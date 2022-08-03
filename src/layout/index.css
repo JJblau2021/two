@@ -1,0 +1,12 @@
+/*================== Layout Css ==================*/
+.app__wrap {
+  @apply w-full h-full overflow-hidden flex text-gray-600 bg-white;
+}
+
+.app__sider__wrap {
+  @apply w-full h-full max-w-xs;
+}
+
+.app__content {
+  @apply w-full h-full overflow-x-hidden overflow-y-auto flex-1;
+}

@@ -1,0 +1,12 @@
+/*================== Menu Wrap Css ==================*/
+.menu__wrap {
+  @apply w-full
+}
+
+.menu__main {
+  @apply w-full
+}
+
+.menu__body {
+  @apply w-full overflow-hidden
+}
