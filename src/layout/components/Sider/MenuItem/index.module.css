@@ -1,8 +1,0 @@
-/*================== Menu Item Css ==================*/
-.menu__item {
-  @apply cursor-pointer hover:text-white hover:bg-pink-500 text-pink-500 flex items-center
-}
-
-.active {
-  @apply bg-pink-500 text-white
-}

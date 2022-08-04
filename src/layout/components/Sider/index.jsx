@@ -3,8 +3,9 @@
  * @returns
  */
 import styles from './index.module.css';
-import MenuWrap from '../../../components/MenuWrap';
-import MenuItem from './MenuItem';
+import MenuWrap from '@/components/MenuWrap';
+import MenuMainItem from './MenuMainItem';
+import MenuSubItem from './MenuSubItem';
 import { memo } from 'react';
 
 const Sider = ({ menu, selectedKey, onSelect }) => {
@@ -14,14 +15,14 @@ const Sider = ({ menu, selectedKey, onSelect }) => {
       <MenuWrap
         key={key}
         options={menuItem}
-        mainItem={<MenuItem />}
+        mainItem={<MenuMainItem />}
         value={selectedKey}
         onChange={onSelect && onSelect}
       >
-        <MenuItem className="pl-6" />
+        <MenuSubItem className="pl-6" />
       </MenuWrap>
     ) : (
-      <MenuItem
+      <MenuMainItem
         {...menuItem}
         checked={selectedKey && selectedKey[0] === key}
         onClick={() => {

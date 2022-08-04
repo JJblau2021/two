@@ -11,7 +11,16 @@ const menus = [
         index: true,
         element: <Home />,
         title: 'home',
-        icon: 'search',
+      },
+      {
+        path: '/home/a',
+        element: <Home />,
+        title: 'homeA',
+      },
+      {
+        path: '/home/b',
+        element: <Home />,
+        title: 'homeB',
       },
     ],
   },
@@ -20,6 +29,48 @@ const menus = [
     path: '/haha',
     icon: 'menu',
     element: 'haha',
+  },
+  {
+    title: 'hbhb',
+    path: '/hbhb',
+    icon: 'settings_backup_restore',
+    children: [
+      {
+        index: true,
+        element: 'hbhb',
+        title: 'hbhb',
+      },
+      {
+        path: '/hbhb/a',
+        element: 'hbhb',
+        title: 'hbhb',
+      },
+      {
+        path: '/hbhb/b',
+        element: 'hbhb',
+        title: 'hbhb',
+      },
+      {
+        path: '/hbhb/c',
+        element: 'hbhb',
+        title: 'hbhb',
+      },
+      {
+        path: '/hbhb/d',
+        element: 'hbhb',
+        title: 'hbhb',
+      },
+      {
+        path: '/hbhb/e',
+        element: 'hbhb',
+        title: 'hbhb',
+      },
+      {
+        path: '/hbhb/f',
+        element: 'hbhb',
+        title: 'hbhb',
+      },
+    ],
   },
   {
     path: '*',
@@ -36,7 +87,7 @@ const routes = [
 ];
 
 function getSideMenuItem(pre, { title, path = '/', children, index, ...rest }) {
-  if (index || path.endsWith(title)) {
+  if (index || path !== '*') {
     return [
       ...pre,
       {

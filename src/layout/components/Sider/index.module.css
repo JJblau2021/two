@@ -1,4 +1,4 @@
 /*================== Sider Css ==================*/
-.sub__menu__item {
-  
+.sider__wrap {
+  @apply grid gap-1 overflow-auto max-h-full
 }

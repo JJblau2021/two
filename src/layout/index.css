@@ -4,9 +4,9 @@
 }
 
 .app__sider__wrap {
-  @apply w-full h-full max-w-xs;
+  @apply w-full h-full max-w-xs p-4 border-gray-200 border-r-2 border-dashed;
 }
 
 .app__content {
-  @apply w-full h-full overflow-x-hidden overflow-y-auto flex-1;
+  @apply w-full h-full overflow-x-hidden overflow-y-auto flex-1 p-4;
 }

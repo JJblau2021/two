@@ -1,10 +1,10 @@
 /**
- * MenuItem
+ * MenuMainItem
  * @returns
  */
 import MIcon from '@/components/MIcon';
 import styles from './index.module.css';
-const MenuItem = ({ icon, checked, title, onClick, className }) => {
+const MenuMainItem = ({ icon, checked, title, onClick, className }) => {
   return (
     <div
       className={[
@@ -14,10 +14,10 @@ const MenuItem = ({ icon, checked, title, onClick, className }) => {
       ].join(' ')}
       onClick={onClick}
     >
-      <MIcon icon={icon} />
+      <MIcon icon={icon} className={styles.menu__icon} />
       <span>{title}</span>
     </div>
   );
 };
 
-export default MenuItem;
+export default MenuMainItem;
