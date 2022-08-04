@@ -5,23 +5,32 @@
 import styles from './index.module.css';
 import MenuWrap from '../../../components/MenuWrap';
 import MenuItem from './MenuItem';
+import { memo } from 'react';
 
-const Sider = () => {
-  return (
-    <div className={styles.sider__wrap}>
+const Sider = ({ menu, selectedKey, onSelect }) => {
+  const renderMenuItem = (menuItem) => {
+    const { children, key } = menuItem;
+    return children ? (
       <MenuWrap
-        options={{
-          key: 'aaaa',
-          title: 'aaaa',
-          icon: 'home',
-          children: [{ key: 'bbbb', title: 'bbbb', icon: 'home' }],
-        }}
+        key={key}
+        options={menuItem}
         mainItem={<MenuItem />}
+        value={selectedKey}
+        onChange={onSelect && onSelect}
       >
-        <MenuItem />
+        <MenuItem className="pl-6" />
       </MenuWrap>
-    </div>
-  );
+    ) : (
+      <MenuItem
+        {...menuItem}
+        checked={selectedKey && selectedKey[0] === key}
+        onClick={() => {
+          onSelect && onSelect([key], menuItem);
+        }}
+      />
+    );
+  };
+  return <div className={styles.sider__wrap}>{menu?.map(renderMenuItem)}</div>;
 };
 
-export default Sider;
+export default memo(Sider);

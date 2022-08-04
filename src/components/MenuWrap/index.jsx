@@ -3,7 +3,7 @@
  * @returns
  */
 import styles from './index.module.css';
-import React, { useRef } from 'react';
+import React, { useRef, useState, useMemo } from 'react';
 
 const MenuWrap = ({
   children,
@@ -14,18 +14,28 @@ const MenuWrap = ({
   mainItem,
   onOpenToggle,
 }) => {
+  const [innerOpen, setInnerOpen] = useState(false);
+  const isOpen = useMemo(() => {
+    if (open !== undefined) {
+      return open;
+    }
+    return innerOpen;
+  }, [open, innerOpen]);
   const mainMenuItem = React.cloneElement(mainItem, {
     ...mainItem.props,
     ...options,
     checked: value?.[0] === options?.key,
-    onClick: onOpenToggle && onOpenToggle(options?.key),
+    onClick: () => {
+      onOpenToggle && onOpenToggle(!open, options?.key);
+      setInnerOpen(!innerOpen);
+    },
   });
   const renderChildMenuItem = (props) => {
     return React.cloneElement(children, {
       ...children.props,
       ...props,
-      checked: value?.[1] === props.key,
-      onClick: onChange && onChange([options?.key, props.key], props),
+      checked: value?.[0] === options?.key && value?.[1] === props.key,
+      onClick: () => onChange && onChange([options?.key, props.key], props),
     });
   };
   const contentRef = useRef();
@@ -34,7 +44,7 @@ const MenuWrap = ({
       <div className={styles.menu__main}>{mainMenuItem}</div>
       <div
         className={styles.menu__body}
-        style={{ height: open ? contentRef.current.offsetHeight : 0 }}
+        style={{ height: isOpen ? contentRef.current.offsetHeight : 0 }}
       >
         <div className={styles.menu__body__content} ref={contentRef}>
           {options?.children?.map(renderChildMenuItem)}

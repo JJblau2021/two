@@ -9,6 +9,7 @@
     "autoprefixer": "^10.4.8",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "lottie-web": "^5.9.6",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
@@ -20,8 +21,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -47,5 +48,9 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "pretter --write"
     ]
+  },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.2.1"
   }
 }

@@ -8,5 +8,5 @@
 }
 
 .menu__body {
-  @apply w-full overflow-hidden
+  @apply w-full overflow-hidden transition-all
 }
