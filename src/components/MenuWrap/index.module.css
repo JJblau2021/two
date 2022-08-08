@@ -3,10 +3,6 @@
   @apply w-full
 }
 
-.menu__main {
-  @apply w-full bg-white
-}
-
 .menu__body {
   @apply w-full overflow-hidden transition-all bg-white;
 }

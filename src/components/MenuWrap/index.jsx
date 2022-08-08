@@ -41,7 +41,7 @@ const MenuWrap = ({
   const contentRef = useRef();
   return (
     <div className={styles.menu__wrap}>
-      <div className={styles.menu__main}>{mainMenuItem}</div>
+      {mainMenuItem}
       <div
         className={styles.menu__body}
         style={{ height: isOpen ? contentRef.current.offsetHeight : 0 }}
