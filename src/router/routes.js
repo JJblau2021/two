@@ -41,7 +41,7 @@ const menus = [
         title: 'hbhb',
       },
       {
-        path: '/hbhb/a',
+        path: '/hbhb/cccc',
         element: 'hbhb',
         title: 'hbhb',
       },
