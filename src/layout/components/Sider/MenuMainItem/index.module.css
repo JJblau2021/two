@@ -4,7 +4,7 @@
 }
 
 .active {
-  @apply bg-pink-50
+  @apply bg-pink-50 text-pink-500 font-semibold
 }
 
 .menu__icon {
