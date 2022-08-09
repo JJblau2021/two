@@ -13,7 +13,7 @@
 }
 
 .menu__item.active::before {
-  @apply  bg-pink-500 scale-100;
+  @apply  theme-bg scale-100;
 
 }
 

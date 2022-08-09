@@ -6,23 +6,7 @@ const menus = [
     title: 'home',
     path: '/home',
     icon: 'home',
-    children: [
-      {
-        index: true,
-        element: <Home />,
-        title: 'home',
-      },
-      {
-        path: '/home/a',
-        element: <Home />,
-        title: 'homeA',
-      },
-      {
-        path: '/home/b',
-        element: <Home />,
-        title: 'homeB',
-      },
-    ],
+    element: <Home />,
   },
   {
     title: 'haha',

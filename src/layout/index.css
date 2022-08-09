@@ -1,12 +1,21 @@
 /*================== Layout Css ==================*/
 .app__wrap {
-  @apply w-full h-full overflow-hidden flex text-gray-600 bg-white;
+  @apply w-full h-full overflow-hidden flex theme-text-main bg-white;
 }
 
 .app__sider__wrap {
   @apply w-full h-full max-w-xs p-4 border-gray-200 border-r-2 border-dashed;
 }
 
-.app__content {
-  @apply w-full h-full overflow-x-hidden overflow-y-auto flex-1 p-4;
+.app__content__wrap {
+  @apply w-full h-full overflow-x-hidden overflow-y-auto flex-1 lg:p-8 lg:pt-28 p-4 pt-24;
+}
+
+.app__content__container {
+  @apply w-full m-auto 2xl:max-w-screen-2xl
+}
+
+.app__header {
+  @apply fixed top-0 right-0 bg-white bg-opacity-50 flex items-center h-20 backdrop-blur-xl justify-between p-4;
+  width: calc(100% - theme('maxWidth.xs'));
 }

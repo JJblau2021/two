@@ -6,7 +6,7 @@
 const MIcon = ({ icon, className, style, onClick }) => {
   return (
     <span
-      className={['material-symbols-outlined', className].join(' ')}
+      className={['material-symbols-outlined select-none', className].join(' ')}
       style={style}
       onClick={onClick}
     >

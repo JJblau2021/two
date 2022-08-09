@@ -24,6 +24,8 @@ const MenuWrap = ({
   const mainMenuItem = React.cloneElement(mainItem, {
     ...mainItem.props,
     ...options,
+    isOpen,
+    toggleable: true,
     checked: value?.[0] === options?.key,
     onClick: () => {
       onOpenToggle && onOpenToggle(!open, options?.key);

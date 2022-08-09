@@ -4,7 +4,15 @@
  */
 import MIcon from '@/components/MIcon';
 import styles from './index.module.css';
-const MenuMainItem = ({ icon, checked, title, onClick, className }) => {
+const MenuMainItem = ({
+  icon,
+  checked,
+  title,
+  onClick,
+  className,
+  isOpen,
+  toggleable,
+}) => {
   return (
     <div
       className={[
@@ -16,6 +24,13 @@ const MenuMainItem = ({ icon, checked, title, onClick, className }) => {
     >
       <MIcon icon={icon} className={styles.menu__icon} />
       <span>{title}</span>
+      {toggleable && (
+        <MIcon
+          icon="chevron_right"
+          className="ml-auto"
+          style={{ transform: `rotate(${isOpen ? 90 : 0}deg)` }}
+        />
+      )}
     </div>
   );
 };

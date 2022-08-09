@@ -3,3 +3,36 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer utilities {
+  .theme-text-main {
+    @apply text-gray-700
+  }
+  .theme-text-title {
+    @apply text-gray-900;
+  }
+  .theme-bg {
+    background-color: var(--theme-bg);
+  }
+  .theme-bg-light {
+    background-color: var(--theme-bg-light);
+  }
+  .theme-bg-lighter {
+    background-color: var(--theme-bg-lighter);
+  }
+  .theme-text-colored {
+    color: var(--theme-text-colored);
+  }
+  .theme-primary  {
+    --theme-bg: theme('backgroundColor.primary.500');
+    --theme-bg-light: theme('backgroundColor.primary.300');
+    --theme-bg-lighter: theme('backgroundColor.primary.50');
+    --theme-text-colored: theme('textColor.primary.500');
+  }
+  .theme-secondary {
+    --theme-bg: theme('backgroundColor.secondary.500');
+    --theme-bg-light: theme('backgroundColor.secondary.300');
+    --theme-bg-lighter: theme('backgroundColor.secondary.50');
+    --theme-text-colored: theme('textColor.secondary.500');
+  }
+}
