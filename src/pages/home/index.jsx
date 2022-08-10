@@ -1,5 +1,10 @@
 import './index.css';
+import services from '@/services';
 export default function Home() {
+  const onClick = async () => {
+    const ret = await services.getPokemonInfo({ id: 1 });
+    console.log(ret, 'ret');
+  };
   return (
     <section className="grid grid-cols-3 gap-4 lg:gap-8">
       <div className="home__card col-span-2 main__card grid gap-2">
@@ -8,7 +13,10 @@ export default function Home() {
           <p>blablabla</p>
           <p>blablablablablabla...</p>
         </div>
-        <button className="justify-self-start py-2 px-4 theme-bg rounded-md hover:theme-bg-alt text-white focus:ring-2 ring-offset-2 ring-offset-indigo-300 focus:ring-indigo-700 focus:outline-none focus:ring-opacity-50">
+        <button
+          className="justify-self-start py-2 px-4 theme-bg rounded-md hover:theme-bg-alt text-white focus:ring-2 ring-offset-2 ring-offset-indigo-300 focus:ring-indigo-700 focus:outline-none focus:ring-opacity-50"
+          onClick={onClick}
+        >
           哈哈
         </button>
       </div>

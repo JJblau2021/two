@@ -29,11 +29,14 @@ const authErrMap = {
  */
 export function handleNetWorkErr(errStatus) {
   if (!errStatus) {
+    console.error('未知错误');
     return '未知错误';
   }
   if (netWorkErrMap[errStatus]) {
+    console.error(netWorkErrMap[errStatus]);
     return netWorkErrMap[errStatus];
   }
+  console.error(`其他连接错误 -${errStatus}`);
   return `其他连接错误 -${errStatus}`;
 }
 
@@ -51,5 +54,5 @@ export function handleAuthErr(errNo) {
 }
 
 export function handleConfigureAuth(config) {
-  config.header['token'] = localStorage.getItem('token') || '';
+  config.headers['token'] = localStorage.getItem('token') || '';
 }

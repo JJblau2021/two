@@ -35,7 +35,7 @@ const generateRequest = (apiStr) => {
     options.url = apiConfig[1];
   }
   return (payload) => {
-    options.url.replace(/(?<=:)\w+(?=\/)/g, (str) => {
+    options.url = options.url.replace(/:\w+((?=\/)|$)/g, (str) => {
       return payload[str.slice(1)];
     });
     options[
@@ -45,15 +45,21 @@ const generateRequest = (apiStr) => {
         ? 'data'
         : 'params'
     ] = payload;
-    return axios(options).then((response) => {
-      console.log(response, 'response');
-      return response;
-    });
+    return axios(options)
+      .then((response) => {
+        return response.data;
+      })
+      .catch(() => {
+        return null;
+      });
   };
 };
 
 export default new Proxy(apis, {
   get(t, p) {
+    if (!t[p]) {
+      return () => Promise.reject(new Error('Err: No Api'));
+    }
     return generateRequest(t[p]);
   },
 });
