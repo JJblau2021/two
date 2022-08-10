@@ -1,11 +1,11 @@
 /*================== home Css ==================*/
 .home__card {
-  @apply rounded-md shadow-md shadow-gray-200 p-4 border-gray-50 border-2;
+  @apply rounded-md shadow-md shadow-gray-200 p-8 border-gray-50 border-2;
   min-height: 160px
 }
 
 .main__card {
-  @apply theme-bg-light h-40 border-none
+  @apply theme-bg-light border-none
 }
 
 .sub__card {

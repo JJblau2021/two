@@ -11,14 +11,19 @@
   .theme-text-title {
     @apply text-gray-900;
   }
-  .theme-bg {
-    background-color: var(--theme-bg);
-  }
-  .theme-bg-light {
-    background-color: var(--theme-bg-light);
-  }
-  .theme-bg-lighter {
-    background-color: var(--theme-bg-lighter);
+  @variants hover, focus {
+    .theme-bg {
+      background-color: var(--theme-bg);
+    }
+    .theme-bg-light {
+      background-color: var(--theme-bg-light);
+    }
+    .theme-bg-lighter {
+      background-color: var(--theme-bg-lighter);
+    }
+    .theme-bg-alt {
+      background-color: var(--theme-bg-alt);
+    }
   }
   .theme-text-colored {
     color: var(--theme-text-colored);
@@ -28,11 +33,34 @@
     --theme-bg-light: theme('backgroundColor.primary.300');
     --theme-bg-lighter: theme('backgroundColor.primary.50');
     --theme-text-colored: theme('textColor.primary.500');
+    --theme-bg-alt: theme('backgroundColor.primary.600');
   }
   .theme-secondary {
     --theme-bg: theme('backgroundColor.secondary.500');
     --theme-bg-light: theme('backgroundColor.secondary.300');
     --theme-bg-lighter: theme('backgroundColor.secondary.50');
     --theme-text-colored: theme('textColor.secondary.500');
+    --theme-bg-alt: theme('backgroundColor.secondary.600');
+  }
+}
+
+@layer base {
+  h6 {
+    @apply text-base xl:text-lg
+  }
+  h5 {
+    @apply text-lg xl:text-xl
+  }
+  h4 {
+    @apply text-xl xl:text-2xl
+  }
+  h3 {
+    @apply text-2xl xl:text-3xl
+  }
+  h2 {
+    @apply text-3xl xl:text-4xl
+  }
+  h1 {
+    @apply text-4xl xl:text-5xl
   }
 }
