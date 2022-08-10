@@ -2,14 +2,22 @@
  * ThemeChanger
  * @returns
  */
-import { useState } from 'react';
+import { useLocaleState } from '@/hooks';
+import { useEffect } from 'react';
 const ThemeChanger = ({ themes }) => {
-  const [curTheme, setCurTheme] = useState(themes[0]);
+  const [curTheme, setCurTheme] = useLocaleState('theme', {
+    defaultValue: themes[0],
+  });
+  useEffect(() => {
+    const rootClassList = document.getElementById('root').classList;
+    rootClassList.add(curTheme.name);
+
+    return () => {
+      rootClassList.remove(curTheme.name);
+    };
+  }, [curTheme]);
   const onThemeChange = (theme) => {
     setCurTheme(theme);
-    const rootClassList = document.getElementById('root').classList;
-    rootClassList.remove(curTheme.name);
-    rootClassList.add(theme.name);
   };
   const renderThemeItem = (theme) => (
     <div
