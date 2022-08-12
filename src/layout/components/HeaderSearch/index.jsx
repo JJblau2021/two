@@ -24,7 +24,7 @@ const HeaderSearch = ({ onSearch }) => {
 
   return (
     <button
-      className="flex items-center p-2 text-gray-400 hover:text-gray-500 bg-white rounded-lg border border-pink-500 border-opacity-20 hover:border-opacity-100"
+      className="flex items-center p-2 text-gray-400 hover:text-gray-500 bg-white rounded-lg border border-theme-200 hover:border-theme-500"
       onClick={onSearchBtnClick}
     >
       <MIcon icon="search" />
