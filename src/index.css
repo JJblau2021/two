@@ -13,34 +13,72 @@
   }
   @variants hover, focus {
     .theme-bg {
-      background-color: var(--theme-bg);
+      background-color: var(--theme-color-500);
     }
     .theme-bg-light {
-      background-color: var(--theme-bg-light);
+      background-color: var(--theme-color-300);
     }
     .theme-bg-lighter {
-      background-color: var(--theme-bg-lighter);
+      background-color: var(--theme-color-50);
     }
     .theme-bg-alt {
-      background-color: var(--theme-bg-alt);
+      background-color: var(--theme-color-600);
     }
   }
+  .theme-bg-gradient {
+    background-image: linear-gradient(to bottom left, var(--theme-color-500), var(--theme-color-300));
+  }
   .theme-text-colored {
-    color: var(--theme-text-colored);
+    color: var(--theme-color-500);
   }
   .theme-primary  {
-    --theme-bg: theme('backgroundColor.primary.500');
-    --theme-bg-light: theme('backgroundColor.primary.300');
-    --theme-bg-lighter: theme('backgroundColor.primary.50');
-    --theme-text-colored: theme('textColor.primary.500');
-    --theme-bg-alt: theme('backgroundColor.primary.600');
+    --theme-color-100: theme('colors.primary.100');
+    --theme-color-200: theme('colors.primary.200');
+    --theme-color-300: theme('colors.primary.300');
+    --theme-color-400: theme('colors.primary.400');
+    --theme-color-500: theme('colors.primary.500');
+    --theme-color-600: theme('colors.primary.600');
+    --theme-color-700: theme('colors.primary.700');
+    --theme-color-800: theme('colors.primary.800');
+    --theme-color-900: theme('colors.primary.900');
+    --theme-color-50: theme('colors.primary.50');
+
   }
   .theme-secondary {
-    --theme-bg: theme('backgroundColor.secondary.500');
-    --theme-bg-light: theme('backgroundColor.secondary.300');
-    --theme-bg-lighter: theme('backgroundColor.secondary.50');
-    --theme-text-colored: theme('textColor.secondary.500');
-    --theme-bg-alt: theme('backgroundColor.secondary.600');
+    --theme-color-100: theme('colors.secondary.100');
+    --theme-color-200: theme('colors.secondary.200');
+    --theme-color-300: theme('colors.secondary.300');
+    --theme-color-400: theme('colors.secondary.400');
+    --theme-color-500: theme('colors.secondary.500');
+    --theme-color-600: theme('colors.secondary.600');
+    --theme-color-700: theme('colors.secondary.700');
+    --theme-color-800: theme('colors.secondary.800');
+    --theme-color-900: theme('colors.secondary.900');
+    --theme-color-50: theme('colors.secondary.50');
+  }
+  .theme-tertiary {
+    --theme-color-100: theme('colors.tertiary.100');
+    --theme-color-200: theme('colors.tertiary.200');
+    --theme-color-300: theme('colors.tertiary.300');
+    --theme-color-400: theme('colors.tertiary.400');
+    --theme-color-500: theme('colors.tertiary.500');
+    --theme-color-600: theme('colors.tertiary.600');
+    --theme-color-700: theme('colors.tertiary.700');
+    --theme-color-800: theme('colors.tertiary.800');
+    --theme-color-900: theme('colors.tertiary.900');
+    --theme-color-50: theme('colors.tertiary.50');
+  }
+  .theme-quaternary {
+    --theme-color-100: theme('colors.quaternary.100');
+    --theme-color-200: theme('colors.quaternary.200');
+    --theme-color-300: theme('colors.quaternary.300');
+    --theme-color-400: theme('colors.quaternary.400');
+    --theme-color-500: theme('colors.quaternary.500');
+    --theme-color-600: theme('colors.quaternary.600');
+    --theme-color-700: theme('colors.quaternary.700');
+    --theme-color-800: theme('colors.quaternary.800');
+    --theme-color-900: theme('colors.quaternary.900');
+    --theme-color-50: theme('colors.quaternary.50');
   }
 }
 

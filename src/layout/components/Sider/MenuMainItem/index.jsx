@@ -2,7 +2,7 @@
  * MenuMainItem
  * @returns
  */
-import MIcon from '@/components/MIcon';
+import { MIcon } from '@/components';
 import styles from './index.module.css';
 const MenuMainItem = ({
   icon,

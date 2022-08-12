@@ -3,7 +3,7 @@
  * @returns
  */
 import styles from './index.module.css';
-import MenuWrap from '@/components/MenuWrap';
+import { MenuWrap } from '@/components';
 import MenuMainItem from './MenuMainItem';
 import MenuSubItem from './MenuSubItem';
 import { memo } from 'react';

@@ -20,6 +20,16 @@ const themes = [
     bg: 'bg-secondary-300',
     active: 'bg-secondary-500',
   },
+  {
+    name: 'theme-tertiary',
+    bg: 'bg-tertiary-300',
+    active: 'bg-tertiary-500',
+  },
+  {
+    name: 'theme-quaternary',
+    bg: 'bg-quaternary-300',
+    active: 'bg-quaternary-500',
+  },
 ];
 const Layout = () => {
   const { pathname } = useLocation();

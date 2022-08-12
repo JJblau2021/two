@@ -3,7 +3,6 @@
 		"scope": "javascript,typescript",
 		"prefix": "jsx",
 		"body": [
-	
 			"/**",
 			" * ${1:Cpn}",
 			" * @returns",
