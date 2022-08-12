@@ -26,7 +26,7 @@ export default function Home() {
           </Button>
         </div>
         <div className="h-60 w-96 main__card__bg relative">
-          <OfficeImg className="h-full w-full absolute top-0 left-0 theme-text-colored" />
+          <OfficeImg className="h-full w-full absolute top-0 left-0 text-theme-colored" />
         </div>
       </div>
       <div className="home__card sub__card">home2</div>

@@ -5,9 +5,11 @@
 import './index.css';
 import { Outlet, useNavigate, useLocation } from 'react-router';
 import Sider from './components/Sider';
-import { useMemo, useCallback } from 'react';
+import { useMemo, useCallback, useState, useEffect } from 'react';
 import { sideMenus } from '../router/routes';
 import ThemeChanger from './components/ThemeChanger';
+import HeaderSearch from './components/HeaderSearch';
+import { useDebounceFn } from '../hooks';
 
 const themes = [
   {
@@ -45,6 +47,13 @@ const Layout = () => {
     },
     [navigate],
   );
+  const onSearch = useDebounceFn(
+    (props) => {
+      console.log(props, 'onSearch');
+    },
+    { delay: 300 },
+    [],
+  );
 
   return (
     <div className="app__wrap">
@@ -57,7 +66,7 @@ const Layout = () => {
         </div>
       </main>
       <header className="app__header">
-        headder
+        <HeaderSearch onSearch={onSearch} />
         <ThemeChanger themes={themes} />
       </header>
     </div>

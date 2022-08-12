@@ -13,7 +13,7 @@
 }
 
 .menu__item.active::before {
-  @apply  theme-bg scale-100;
+  @apply  bg-theme-500 scale-100;
 
 }
 

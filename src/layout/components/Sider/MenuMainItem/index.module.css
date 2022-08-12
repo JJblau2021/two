@@ -1,10 +1,10 @@
 /*================== Menu Item Css ==================*/
 .menu__item {
-  @apply cursor-pointer hover:bg-gray-100 theme-text-main flex items-center px-3 py-2 rounded-sm bg-white sticky z-10 top-0;
+  @apply cursor-pointer hover:bg-gray-100 text-theme-main flex items-center px-3 py-2 rounded-sm bg-white sticky z-10 top-0;
 }
 
 .active {
-  @apply font-semibold theme-text-colored theme-bg-lighter
+  @apply font-semibold text-theme-colored bg-theme-100
 }
 
 .menu__icon {
@@ -12,5 +12,5 @@
 }
 
 .active .menu__icon {
-  @apply theme-text-colored
+  @apply text-theme-colored
 }

@@ -1,6 +1,6 @@
 /*================== Layout Css ==================*/
 .app__wrap {
-  @apply w-full h-full overflow-hidden flex theme-text-main bg-white;
+  @apply w-full h-full overflow-hidden flex text-theme-main bg-white;
 }
 
 .app__sider__wrap {

@@ -5,13 +5,13 @@
 @tailwind utilities;
 
 @layer utilities {
-  .theme-text-main {
+  .text-theme-main {
     @apply text-gray-700
   }
   .theme-text-title {
     @apply text-gray-900;
   }
-  @variants hover, focus {
+  /* @variants hover, focus {
     .theme-bg {
       background-color: var(--theme-color-500);
     }
@@ -24,11 +24,11 @@
     .theme-bg-alt {
       background-color: var(--theme-color-600);
     }
-  }
+  } */
   .theme-bg-gradient {
     background-image: linear-gradient(to bottom left, var(--theme-color-500), var(--theme-color-300));
   }
-  .theme-text-colored {
+  .text-theme-colored {
     color: var(--theme-color-500);
   }
   .theme-primary  {

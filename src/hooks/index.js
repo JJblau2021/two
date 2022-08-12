@@ -1,2 +1,3 @@
 import useLocaleState from './useLocaleState';
-export { useLocaleState };
+import useDebounceFn from './useDebounceFn';
+export { useLocaleState, useDebounceFn };
