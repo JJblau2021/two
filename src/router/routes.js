@@ -1,5 +1,6 @@
 import Layout from '../layout';
 import Home from '../pages/home';
+import Wine from '../pages/wine';
 
 const menus = [
   {
@@ -21,8 +22,8 @@ const menus = [
     children: [
       {
         index: true,
-        element: 'hbhb',
-        title: 'hbhb',
+        element: <Wine />,
+        title: 'wine',
       },
       {
         path: '/hbhb/cccc',
