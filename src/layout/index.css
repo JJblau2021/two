@@ -12,7 +12,7 @@
 }
 
 .app__content__container {
-  @apply w-full m-auto 2xl:max-w-screen-2xl
+  @apply w-full h-full m-auto 2xl:max-w-screen-2xl
 }
 
 .app__header {

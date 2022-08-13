@@ -1,11 +1,12 @@
-/**
- * Wine
- * @returns
- */
-import './index.css';
+import WineModal from './components/WineModal';
+import { useState, useEffect } from 'react';
 
-const Wine = () => {
-  return <div>Wine</div>;
-};
-
-export default Wine;
+export default function Wine() {
+  const [wineApi, setWineApi] = useState(null);
+  useEffect(() => {
+    if (wineApi) {
+      wineApi.loop();
+    }
+  }, [wineApi]);
+  return <WineModal getApi={setWineApi} />;
+}
