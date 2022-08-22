@@ -5,7 +5,7 @@
 import './index.css';
 import { Outlet, useNavigate, useLocation } from 'react-router';
 import Sider from './components/Sider';
-import { useMemo, useCallback, useState, useEffect } from 'react';
+import { useMemo, useCallback } from 'react';
 import { sideMenus } from '../router/routes';
 import ThemeChanger from './components/ThemeChanger';
 import HeaderSearch from './components/HeaderSearch';

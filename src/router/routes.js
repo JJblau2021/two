@@ -5,7 +5,7 @@ import Wine from '../pages/wine';
 const menus = [
   {
     title: 'home',
-    path: '/home',
+    index: true,
     icon: 'home',
     element: <Home />,
   },
