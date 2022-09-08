@@ -1,0 +1,21 @@
+.tag__group__wrap {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(3, 40px);
+}
+.tag {
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 17px;
+  display: inline-block;
+  white-space: nowrap;
+  transition: 0.3s;
+  border-radius: 2px;
+  width: 40px;
+  text-align: center;
+}
+
+.tag.checked {
+  color: #1d2129;
+  background-color: #fcd946;
+}

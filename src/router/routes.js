@@ -1,6 +1,7 @@
 import Layout from '../layout';
 import Home from '../pages/home';
 import Wine from '../pages/wine';
+import Demo from '../pages/demo';
 
 const menus = [
   {
@@ -60,6 +61,12 @@ const menus = [
   {
     path: '*',
     element: '404',
+  },
+  {
+    title: 'demo',
+    icon: 'menu',
+    path: '/demo',
+    element: <Demo />,
   },
 ];
 

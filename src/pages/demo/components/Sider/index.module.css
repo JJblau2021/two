@@ -1,0 +1,48 @@
+/*================== Sider Css ==================*/
+.sider__wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* color: var(--text-base-color, #fff); */
+  /* background-color: var(--bg-base-color, #1a1a1a); */
+  font-size: var(--font-size-base, 14px);
+  line-height: var(--line-height-base, 20px);
+  font-family: var(--font-family-base, PingFang SC);
+  width: min(100%, 164px);
+}
+.sider__wrap h5 {
+  color: inherit;
+  font-size: var(--font-size-base, 14px);
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.sider__hd {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color, #000);
+}
+.sider__bd {
+  padding: 12px 20px;
+  flex: 1;
+  overflow: scroll;
+  display: grid;
+  row-gap: 20px;
+  align-content: flex-start;
+}
+.sider__ft {
+  padding: 12px 20px;
+}
+
+.sider__form {
+  color: inherit;
+}
+.sider__box {
+  /* color: var(--text-base-color, #fff); */
+}
+
+.sider__box h5 {
+  margin-bottom: 8px;
+}
+
+.sider__box__content {
+}
